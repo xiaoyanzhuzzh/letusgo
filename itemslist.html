@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset ="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>来此购购物商城</title>
+    <!-- add css sources at here -->
+
+    <!--<link rel="stylesheet" href="css/myStyle.css"/>-->
+    <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css"/>
+
+    <!-- add javascript libs at here -->
+    <script type="text/javascript" src="lib/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="lib/lodash-2.4.1/lodash.compat.js"></script>
+
+    <!-- add javascript sources at here -->
+    <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body>
+
+
+        <div class="header area" data-area="header">
+            <div class="header_cnt cf">
+                <div class="header_left fl">
+                    &nbsp;&nbsp;欢迎来到来此购购物商城!
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <label>
+                        <a class="navbar-brand" href="#">Let's go!</a>
+                    </label>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav text-success">
+
+                        <li><a href="index.html">主页</a></li>
+                        <li class="active"><a href="#">商城</a></li>
+
+                        <li><a href="cartpay.html">购物结算</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="cart.html"><p class="glyphicon glyphicon-shopping-cart text-success"></p>购物车
+                                (<span id="itemsNumber"></span>)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="panel panel-warning">
+            <div class="panel-heading"><h3>商品列表</h3>
+                <!--<select class="form-control">-->
+                    <!--<option>水果类</option>-->
+                    <!--<option>坚果类</option>-->
+                    <!--<option>蔬菜类</option>-->
+                    <!--<option>饮品类</option>-->
+                    <!--<option>其它</option>-->
+                <!--</select>-->
+            </div>
+            <div class="panel-body">
+                <div class="panel panel-default">
+                    <div class="panel-heading">水果类</div>
+                    <div class="panel-body">
+                         <div class="row">
+                             <div id="class" class="col-md-4 form-group">苹果</div>
+                             <div id="class" class="col-md-4 form-group">4元/斤</div>
+                             <div id="class" class="col-md-4 form-group"><button type="button" class="btn btn-primary btn-sm">加至购物车</button></div>
+                         </div>
+                        <div class="row">
+                            <div id="class" class="col-md-4 form-group">苹果</div>
+                            <div id="class" class="col-md-4 form-group">4元/斤</div>
+                            <div id="class" class="col-md-4 form-group"><button type="button" class="btn btn-primary btn-sm">加至购物车</button></div>
+                        </div>
+                        <div class="row">
+                            <div id="class" class="col-md-4 form-group">苹果</div>
+                            <div id="class" class="col-md-4 form-group">4元/斤</div>
+                            <div id="class" class="col-md-4 form-group"><button type="button" class="btn btn-primary btn-sm">加至购物车</button></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">坚果类</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div id="class" class="col-md-4 form-group">苹果</div>
+                            <div id="class" class="col-md-4 form-group">4元/斤</div>
+                            <div id="class" class="col-md-4 form-group"><button type="button" class="btn btn-primary btn-sm">加至购物车</button></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">蔬菜类</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div id="class" class="col-md-4 form-group">苹果</div>
+                            <div id="class" class="col-md-4 form-group">4元/斤</div>
+                            <div id="class" class="col-md-4 form-group"><button type="button" class="btn btn-primary btn-sm">加至购物车</button></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">饮品类</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div id="class" class="col-md-4 form-group">苹果</div>
+                            <div id="class" class="col-md-4 form-group">4元/斤</div>
+                            <div id="class" class="col-md-4 form-group"><button type="button" class="btn btn-primary btn-sm">加至购物车</button></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">其它</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div id="class" class="col-md-4 form-group">苹果</div>
+                            <div id="class" class="col-md-4 form-group">4元/斤</div>
+                            <div id="class" class="col-md-4 form-group"><button type="button" class="btn btn-primary btn-sm">加至购物车</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
+
+
+
+

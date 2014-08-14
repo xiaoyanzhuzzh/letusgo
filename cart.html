@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset ="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>来此购购物商城</title>
+    <!-- add css sources at here -->
+
+    <!--<link rel="stylesheet" href="css/myStyle.css"/>-->
+    <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css"/>
+
+    <!-- add javascript libs at here -->
+    <script type="text/javascript" src="lib/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="lib/lodash-2.4.1/lodash.compat.js"></script>
+
+    <!-- add javascript sources at here -->
+    <script type="text/javascript" src="main.js"></script>
+</head>
+   <body>
+        <div class="header area" data-area="header">
+            <div class="header_cnt cf">
+                <div class="header_left fl">
+                    &nbsp;&nbsp;欢迎来到来此购购物商城!
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <label>
+                        <a class="navbar-brand" href="#">Let's go!</a>
+                    </label>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav text-success">
+
+                        <li role="presentation"><a href="index.html">主页</a></li>
+                        <li role="presentation"><a href="itemslist.html">商城</a></li>
+
+                        <li role="presentation"><a href="cartpay.html">购物结算</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#">
+                                <p class="glyphicon glyphicon-shopping-cart text-primary"></p>购物车
+                                (<span id="itemsNumber"></span>)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <div class="page-header"><h2>购物清单</h2></div>
+            <div class="pag">
+                <div class="table">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-success">水果类</li>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-warning">
+                                    <div class="row">
+                                        <div class="col-md-2">苹果</div>
+                                        <div class="col-md-2">4元/斤</div>
+                                        <div class="col-md-2">2斤</div>
+                                        <div class="col-md-2">8元</div>
+                                        <div class="col-md-4">
+                                            <button><span class="glyphicon glyphicon-plus"></span></button>
+                                            <input type="text" class="" value="2">
+                                            <button><span class="glyphicon glyphicon-minus"></span></button></div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-warning">
+                                    <div class="row">
+                                        <div class="col-md-2">香蕉</div>
+                                        <div class="col-md-2">4元/斤</div>
+                                        <div class="col-md-2">2斤</div>
+                                        <div class="col-md-2">8元</div>
+                                        <div class="col-md-4">
+                                            <button><span class="glyphicon glyphicon-plus"></span></button>
+                                            <input type="text" class="" value="2">
+                                            <button><span class="glyphicon glyphicon-minus"></span></button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item list-group-item-warning">
+                                    <div class="row">
+                                        <div class="col-md-2">桃子</div>
+                                        <div class="col-md-2">4元/斤</div>
+                                        <div class="col-md-2">2斤</div>
+                                        <div class="col-md-2">8元</div>
+                                        <div class="col-md-4">
+                                            <button><span class="glyphicon glyphicon-plus"></span></button>
+                                            <input type="text" class="" value="2">
+                                            <button><span class="glyphicon glyphicon-minus"></span></button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        <!--<li class="list-group-item list-group-item-danger">坚果类</li>-->
+                            <!--<ul class="list-group">-->
+                                <!--<li class="list-group-item list-group-item-success">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-2">开心果</div>-->
+                                        <!--<div class="col-md-2">45元/斤</div>-->
+                                        <!--<div class="col-md-2">2斤</div>-->
+                                        <!--<div class="col-md-2">90元</div>-->
+                                        <!--<div class="col-md-4">数量加减</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li class="list-group-item list-group-item-success">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-2">核桃</div>-->
+                                        <!--<div class="col-md-2">14元/斤</div>-->
+                                        <!--<div class="col-md-2">2斤</div>-->
+                                        <!--<div class="col-md-2">28元</div>-->
+                                        <!--<div class="col-md-4">数量加减</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--<li class="list-group-item list-group-item-info">饮品类</li>-->
+                            <!--<ul class="list-group">-->
+                                <!--<li class="list-group-item list-group-item-warning">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-2">农夫山泉</div>-->
+                                        <!--<div class="col-md-2">2元/瓶</div>-->
+                                        <!--<div class="col-md-2">2瓶</div>-->
+                                        <!--<div class="col-md-2">4元</div>-->
+                                        <!--<div class="col-md-4">数量加减</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li class="list-group-item list-group-item-warning">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-2">可口可乐</div>-->
+                                        <!--<div class="col-md-2">2元/瓶</div>-->
+                                        <!--<div class="col-md-2">2瓶</div>-->
+                                        <!--<div class="col-md-2">4元</div>-->
+                                        <!--<div class="col-md-4"><p>-->
+                                            <!--<button type="button" class="btn btn-primary btn-sm">Small button</button>-->
+                                        <!--</p></div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+
+                            <!--</ul>-->
+                        <!--<li class="list-group-item list-group-item-success">蔬菜类</li>-->
+                            <!--<ul class="list-group">-->
+                                <!--<li class="list-group-item list-group-item-danger">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-2">韭菜</div>-->
+                                        <!--<div class="col-md-2">5元/斤</div>-->
+                                        <!--<div class="col-md-2">2斤</div>-->
+                                        <!--<div class="col-md-2">10元</div>-->
+                                        <!--<div class="col-md-4">数量加减</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li class="list-group-item list-group-item-danger">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-2">胡萝卜</div>-->
+                                        <!--<div class="col-md-2">4元/斤</div>-->
+                                        <!--<div class="col-md-2">2斤</div>-->
+                                        <!--<div class="col-md-2">8元</div>-->
+                                        <!--<div class="col-md-4">数量加减</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--&lt;!&ndash;<li class="list-group-item list-group-item-danger"></li>&ndash;&gt;-->
+                            <!--</ul>-->
+                        <!--<li class="list-group-item list-group-item-success">其它</li>-->
+                            <!--<ul class="list-group">-->
+                                <!--<li class="list-group-item list-group-item-warning">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-2">毛巾</div>-->
+                                        <!--<div class="col-md-2">10元/条</div>-->
+                                        <!--<div class="col-md-2">1条</div>-->
+                                        <!--<div class="col-md-2">10元</div>-->
+                                        <!--<div class="col-md-4">数量加减</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li class="list-group-item list-group-item-warning">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-2">拖鞋</div>-->
+                                        <!--<div class="col-md-2">14元/双</div>-->
+                                        <!--<div class="col-md-2">2双</div>-->
+                                        <!--<div class="col-md-2">28元</div>-->
+                                        <!--<div class="col-md-4">数量加减</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--&lt;!&ndash;<li class="list-group-item list-group-item-danger"></li>&ndash;&gt;-->
+                            <!--</ul>-->
+                    </ul>
+                </div>
+            </div>
+
+               <div class="text-right">
+                  <p><a href="cartpay.html" class="btn btn-primary  btn-lg" role="button">亲，结算吧，会有惊喜哦！</a></p>
+               </div>
+            </div>
+        </div>
+
+   </body>
+
+</html>
+
+
+
+
