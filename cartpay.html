@@ -18,8 +18,11 @@
     <script type="text/javascript" src="lib/lodash-2.4.1/lodash.compat.js"></script>
 
     <!-- add javascript sources at here -->
-    <script type="text/javascript" src="main.js"></script>
-</head>
+
+    <script type="text/javascript" src="js/item.js"></script>
+    <script type="text/javascript" src="js/cartItem.js"></script>
+    <script type="text/javascript" src="js/showItemsList.js"></script>
+    <script type="text/javascript" src="js/showCartPay.js"></script>
     <body>
         <div class="header area" data-area="header">
             <div class="header_cnt cf">
@@ -54,8 +57,8 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="cart.html"><p class="glyphicon glyphicon-shopping-cart text-warning "></p>购物车
-                            (<span id="itemsNumber"></span>)
+                            <a href="cart.html">
+                                <span id="itemsNumber" class="glyphicon glyphicon-shopping-cart text-primary">购物车</span>
                             </a>
                         </li>
                     </ul>
@@ -75,18 +78,18 @@
                         <div class="panel-heading"></div>
                             <!--<h2 class="panel-title">一、填空题(每空5分，共4空)</h2>-->
                         <!--</div>-->
-                        <div class="panel-body">
-                            <p>***<没钱赚商品>购物清单***</p>
+                        <div class="panel-body" id="finalList">
+                            <!--<p>***<没钱赚商品>购物清单***</p>-->
 
-                            <p>------------------------------</p>
-                            <p>名称：雪碧，数量：5瓶，单价：3.00(元)，小计：12.00(元)</p>
-                            <p>名称：荔枝，数量：2斤，单价：15.00(元)，小计：30.00(元)</p>
-                            <p>名称：方便面，数量：3袋，单价：4.50(元)，小计：9.00(元)</p>
-                            <p>------------------------------</p>
+                            <!--<p>------------------------------</p>-->
+                            <!--<p>名称：雪碧，数量：5瓶，单价：3.00(元)，小计：12.00(元)</p>-->
+                            <!--<p>名称：荔枝，数量：2斤，单价：15.00(元)，小计：30.00(元)</p>-->
+                            <!--<p>名称：方便面，数量：3袋，单价：4.50(元)，小计：9.00(元)</p>-->
+                            <!--<p>------------------------------</p>-->
 
-                            <p>总计：51.00(元)</p>
-                            <p>节省：7.50(元)</p>
-                            <p>******************************</p>
+                            <!--<p>总计：51.00(元)</p>-->
+                            <!--<p>节省：7.50(元)</p>-->
+                            <!--<p>******************************</p>-->
                         </div>
                     </div>
                 </div>
