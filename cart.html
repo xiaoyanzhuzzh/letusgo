@@ -20,7 +20,7 @@
     <!-- add javascript sources at here -->
     <script type="text/javascript" src="js/item.js"></script>
     <script type="text/javascript" src="js/cartItem.js"></script>
-    <script type="text/javascript" src="js/showItemsList.js"></script>
+    <!--<script type="text/javascript" src="js/showItemsList.js"></script>-->
     <script type="text/javascript" src="js/showCartItemsList.js"></script>
 
 
@@ -58,7 +58,7 @@
                         <li role="presentation"><a href="cartpay.html">购物结算</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><h3>
+                        <li class="active">
                             <a href="#">
                                 <span id="itemsNumber" class="glyphicon glyphicon-shopping-cart text-primary">购物车</span>
                             </a>
@@ -68,26 +68,36 @@
             </div>
         </nav>
         <div class="panel panel-warning">
-            <div class="panel-heading"><h3>购物列表</h3>
-                <div class="panel-title">
-                    <div class="row">
-                        <div class="col-md-2 form-group"><label class="h4"><h4>名称</h4></label></div>
-                        <div class="col-md-2 form-group"><label class="h4"><h4>价格(元)</h4></label></div>
-                        <div class="col-md-2 form-group"><label class="h4"><h4>数量</h4></label></div>
-                        <div class="col-md-4 form-group"><label class="h4"><h4>小计(元)</h4></label></div>
-                    </div>
-                </div>
+            <div class="panel-heading"><h3 class="text-center text-success"<strong>Let's Go</strong>&nbsp;&nbsp;购物列表</h3></div>
 
-            </div>
             <div class="panel-body" id="cartItems">
 
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-2 form-group">名称</div>
+                                <div class="col-md-2 form-group">价格(元)</div>
+                                <div class="col-md-4 form-group">数量(可随意加减)</div>
+                                <div class="col-md-2 form-group">小计(元)</div>
+                                <div class="col-md-2 form-group">删除</div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-2 text-info"><h4>总数：<span class="" id="totalNumber"></span></h4></div>
+                        <div class="col-md-2 text-info"><h4>总计：<span class="" id="total"></span></h4></div>
+                    </div>
+                </div>
             </div>
         </div>
 
-            <h3 class="text-center text-info">总计：<span class="" id="total"></span></h3>
-
-        <div class="text-center">
+        <div class="text-right">
             <p><a href="cartpay.html" class="btn btn-info btn-lg" role="button">亲，结算吧，会有惊喜哦！</a></p>
+
         </div>
 
    </body>

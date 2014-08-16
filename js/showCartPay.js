@@ -7,17 +7,30 @@ $(document).ready(function() {
 function payList() {
 
     var countArray = JSON.parse(localStorage.getItem('cartItems'));
-
+    if(!countArray) {
+        countArray=[];
+    }
 
     var total = 0;
-    var finalText = '<p>***没钱赚商品***</p><p>---------------------------------------</p>';
-    for (var i = 0; i < countArray.length; i++){
-        total += countArray[i].number * countArray[i].item.price;
-        finalText += '<p>名称：' + countArray[i].item.name + ',&nbsp;&nbsp;单价：' + countArray[i].item.price + '元/' + countArray[i].item.unit +
-            ',&nbsp;&nbsp;数量：' + countArray[i].number + countArray[i].item.unit + ',&nbsp;&nbsp;小计：' + countArray[i].subtotal + '元</p>';
+    var totalNumber = 0;
+    var finalText = '';
+    if (countArray.length !== 0) {
+        for (var i = 0; i < countArray.length; i++) {
+            totalNumber += countArray[i].number;
+            total += countArray[i].number * countArray[i].item.price;
+
+            finalText += '<div class="row"><div id="class" class="col-md-2 form-group">' + countArray[i].item.category + '</div>'+
+                '<div id="class" class="col-md-2 form-group">' + countArray[i].item.name + '</div>'+
+                '<div id="class" class="col-md-2 form-group">' + (countArray[i].item.price).toFixed(2) + '/' + countArray[i].item.unit + '</div>'+
+                '<div id="class" class="col-md-2 form-group">' + countArray[i].number + '</div>'+
+                '<div id="class" class="col-md-4 form-group">' + (countArray[i].number * countArray[i].item.price).toFixed(2) + '</div>'+
+                '</div>';
+        }
+        finalText +=
+            '<div class="row"><div id="class" class="col-md-2"><h4>总数：' + totalNumber + '</h4></div></div>'+
+            '<div class="row"><div id="class" class="col-md-2"><h4>总计：' + total.toFixed(2) + '(元)</h4></div></div>';
 
     }
-    finalText += '<p>----------------------------------------</p><p>总计：' + total + '元</p>';
 
     $('#finalList').append(finalText);
 }
