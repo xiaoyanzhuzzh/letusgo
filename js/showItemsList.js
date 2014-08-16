@@ -102,3 +102,4 @@ function isExistInCart(barcode, cartItems){
     }
     return item;
 }
+
