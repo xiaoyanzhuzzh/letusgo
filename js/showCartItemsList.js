@@ -17,7 +17,7 @@ $(document).ready(function(){
     $('.inputItemNumber').on('blur',function(){
         console.log($(this)[0].id);
         changeInput( $(this)[0].id);
-    })
+    });
 
     $('.trash').on('click',function(){
         var cartItem = $(this).closest('.row').find('.inputItemNumber')[0].id;
@@ -165,10 +165,16 @@ function deleteCartItem(item){
     console.log(item);
     for(var i = 0; i < countArray.length; i++){
         if( item === countArray[i].item.name){
-            countArray.remove(i);
-
+            countArray[i].number = 0;
+            $('#' + item).val(0);
+            var subtotal = (countArray[i].number * countArray[i].item.price).toFixed(2);
+            $('#' + item).closest('.row').find('.text-success').text(subtotal);
         }
     }
-    localStorage.setItem('cartItems',JSON.stringify(countArray));
 
+    $('#totalNumber').text(getTotalNumber(countArray));
+    $('#total').text((getTotal(countArray)).toFixed(2) + '元');
+
+    localStorage.setItem('cartItems',JSON.stringify(countArray));
+    $('#itemsNumber').text(localStorage.setItem('cartCount',getTotalNumber(countArray)));
 }
