@@ -33,6 +33,9 @@ function payList() {
                     '<div class="col-md-4 form-group">' + (countArray[i].number * countArray[i].item.price).toFixed(2) + '</div>' +
                     '</div>';
             }
+            else{
+                $('#no').text('虽后会有期，仍需珍惜今夕，回去看看吧，么么哒！')
+            }
         }
         finalText +=
             '<div class="row"><div id="class" class="col-md-2"><h4>总数：' + totalNumber + '</h4></div></div>'+
