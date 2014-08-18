@@ -18,7 +18,6 @@ $(document).ready(function() {
     });
 });
 
-
 function loadAllItems() {
     return [
         new Item('ITEM000000', '可口可乐', '瓶', 3.00, '饮品'),
@@ -29,7 +28,6 @@ function loadAllItems() {
         new Item('ITEM000005', '方便面', '袋', 4.50, '零食')
     ];
 }
-//
 
 function storageItem(items){
 
@@ -40,7 +38,6 @@ function storageItem(items){
     localStorage.item = JSON.stringify(items);
     return localStorage.item;
 }
-//
 
 function showItemsList() {
 
@@ -50,24 +47,23 @@ function showItemsList() {
 
             var text = '';
             text += '<div class="panel panel-default"><div class="panel-body">' +
-                '<div class="row"><div id="class" class="col-md-3 form-group">'+ items[i].category +'</div>' +
-                '<div id="class" class="col-md-3 form-group">'+ items[i].name +'</div>' +
-                '<div id="class" class="col-md-3 form-group">'+ (items[i].price).toFixed(2)+'/'+ items[i].unit +'</div>' +
-                '<div id="class" class="col-md-3 form-group">' +
+                '<div class="row"><div class="col-md-3 form-group">'+ items[i].category +'</div>' +
+                '<div class="col-md-3 form-group">'+ items[i].name +'</div>' +
+                '<div class="col-md-3 form-group">'+ (items[i].price).toFixed(2)+'/'+ items[i].unit +'</div>' +
+                '<div class="col-md-3 form-group">' +
                 '<button type="button" id="'+ items[i].barcode +'"class="btn btn-primary btn-sm">加至购物车</button></div>' +
                 '</div></div></div>';
             $('#itemslist').append(text);
-
-
     }
 }
+
 function getCartList(id) {
 
     var cartItems = JSON.parse(localStorage.getItem('cartItems'));
-
     if (cartItems == null) {
         cartItems = [];
     }
+
     var cartItem = isExistInCart(id, cartItems);
     if (cartItem) {
         cartItem.number += 1;
@@ -77,10 +73,10 @@ function getCartList(id) {
     }
 
     localStorage.setItem('cartItems',JSON.stringify(cartItems));
-
 }
 
 function getCartItems(id){
+
     var item;
     var items = JSON.parse(localStorage.getItem('item'));
     for (var i = 0; i < items.length; i++) {
